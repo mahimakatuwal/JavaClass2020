@@ -5,28 +5,49 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-//     Q10:
         Scanner scnr = new Scanner(System.in);
-        int num1;
-        int num2;
-        char choice;
+        int primeNum;
+        System.out.print("Enter a positive number: ");
+        primeNum = scnr.nextInt();
 
-        do{
-            System.out.print("Enter first number: ");
-            num1 = scnr.nextInt();
+        boolean isItPrime = true;
 
-            System.out.print("Enter second number: ");
-            num2 = scnr.nextInt();
+            for (int i = 2; i < primeNum; i++) {
+                if (primeNum % i == 0)
+                    isItPrime = false;
+            }
 
-            int sum = num1 + num2;
-            System.out.println("Sum of number: "+ sum);
+            if (isItPrime && primeNum >= 2) {
+                System.out.println(primeNum + " is a prime number!!");
 
-            System.out.print("Do you wish to continue? Press y/n: ");
-            choice = scnr.next().charAt(0);
+            } else if (!isItPrime && primeNum >= 2) {
+                System.out.println(primeNum + " is not a prime number.:(");
+            } else {
+                System.out.println("Invalid! Enter a number greater than 1");
+            }
 
-            System.out.println();
-
-        } while(choice == 'y' || choice == 'Y');
+//     Q10:
+//        Scanner scnr = new Scanner(System.in);
+//        int num1;
+//        int num2;
+//        char choice;
+//
+//        do{
+//            System.out.print("Enter first number: ");
+//            num1 = scnr.nextInt();
+//
+//            System.out.print("Enter second number: ");
+//            num2 = scnr.nextInt();
+//
+//            int sum = num1 + num2;
+//            System.out.println("Sum of number: "+ sum);
+//
+//            System.out.print("Do you wish to continue? Press y/n: ");
+//            choice = scnr.next().charAt(0);
+//
+//            System.out.println();
+//
+//        } while(choice == 'y' || choice == 'Y');
 
 
 
@@ -63,23 +84,22 @@ public class Main {
 //
 //        if (primeNum <= 1) {
 //            System.out.println("Invalid, enter a positive number greater than 1.");
-//            isItPrime = false;
+//            //isItPrime = false;
 //        }
-//        else{
-//            for(int i = 2; i <= primeNum / 2; i++){
-//                if(primeNum % i == 0)
+//        else {
+//            for (int i = 2; i < primeNum; i++) {
+//                if (primeNum % i == 0)
 //                    isItPrime = false;
 //            }
 //
-//        }
+//            if (isItPrime) {
+//                System.out.println(primeNum + " is a prime number!!");
 //
-//        if(isItPrime){
-//            System.out.println(primeNum + " is a prime number!!");
-//
+//            } else {
+//                System.out.println(primeNum + " is not a prime number.:(");
+//            }
 //        }
-//        else{
-//            System.out.println(primeNum + " is not a prime number.:(");
-//        }
+
 
 //    ########################################################
 

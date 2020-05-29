@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class FindPrimeNumber {
     int primeNum;
 
+    //creating a constructor
     public FindPrimeNumber(){
         Scanner scnr = new Scanner(System.in);
         System.out.println();
@@ -12,6 +13,7 @@ public class FindPrimeNumber {
         primeNum = scnr.nextInt();
     }
 
+    // creating a method.
     public void detPrime(){
         boolean isItPrime = true;
 

@@ -4,6 +4,7 @@ public class AmazonOrder {
     int itemNum;
     int price;
 
+    //creating a constructor
     public AmazonOrder(int item, int price){
         this.itemNum = item;
         this.price = price;

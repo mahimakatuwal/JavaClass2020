@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
 
         myClass1 myclass1 = new myClass1(11, "A");
-        myClass1 myclass2 = new myClass1(12,"A");
+        myClass1 myclass2 = new myClass1(11,"A");
 
         System.out.println(myclass1);
         System.out.println(myclass1.hashCode());

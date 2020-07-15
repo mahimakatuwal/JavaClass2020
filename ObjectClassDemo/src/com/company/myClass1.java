@@ -17,7 +17,7 @@ public class myClass1{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         myClass1 myClass1 = (myClass1) o;
-        return Objects.equals(rollNum, myClass1.rollNum);
+        return Objects.equals(name, myClass1.name);
 
     }
 

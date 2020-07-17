@@ -1,4 +1,11 @@
 package com.company;
 
-public class sortbyAge {
+import java.util.Comparator;
+
+public class sortbyAge implements Comparator<ChildBank> {
+
+    @Override
+    public int compare(ChildBank o1, ChildBank o2) {
+        return o1.getAge()-o2.getAge();
+    }
 }

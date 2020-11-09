@@ -1,26 +1,29 @@
 package com.company;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Calendar;
-import java.util.Scanner;
 
 public class PartD_2 {
     
-    public void myRandomNum(){
-        long randNum = 0;
-        long num1 = 0;
-
+    public void myRandomNum() throws IOException {
+        int randNum = 0;
         Calendar calendar = Calendar.getInstance();
-        long timeMillisec = calendar.getTimeInMillis();
+        int timeMillisec = (int) calendar.getTimeInMillis();
+        System.out.println(timeMillisec);
+        String str = "";
 
-        for(int i = 0; i < 25; i++){
-            timeMillisec = timeMillisec + num1;
-            randNum = randNum + num1 + timeMillisec * timeMillisec;
-            num1 = timeMillisec;
+        for(int i = 0; i < 100000; ++i){
+            randNum = randNum + timeMillisec;
+            String ConverttoBits = Long.toBinaryString(randNum);
+            str = str + ConverttoBits;
         }
 
-        //System.out.println(randNum);
-        String ConverttoBits = Long.toBinaryString(randNum);
-        System.out.println("PRNG implemented: "+ConverttoBits);
+        File myOutputFile2 = new File("myrandomnum2.txt");
+        FileOutputStream fos = new FileOutputStream(myOutputFile2);
+        byte[] bytesArray2 = str.getBytes();
+        fos.write(bytesArray2);
 
     }
 

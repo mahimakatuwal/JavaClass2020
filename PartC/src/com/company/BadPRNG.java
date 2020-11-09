@@ -10,8 +10,13 @@ public class BadPRNG {
 
         SecureRandom secureRandom = new SecureRandom();
         long randNum = 0;
-        randNum = secureRandom.nextInt(1000);
+
+        for(int i= 0; i < 10; i++) {
+            randNum = secureRandom.nextInt(2);
+
+        }
         String ConverttoBits = Long.toBinaryString(randNum);
+        System.out.println(ConverttoBits);
         String tempBits = ConverttoBits;
 
         int count_p0 = 0;
